@@ -28,4 +28,6 @@ run_analysis.R produces "tidy.txt", a tidy data set as specified in the requirem
 
 Note:
 To read the file back into R, use the following command:
+```{r}
 data <- read.table("tidy.txt", header = TRUE)
+```
