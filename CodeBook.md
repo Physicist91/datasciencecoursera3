@@ -27,9 +27,10 @@ _Raw data used in the cleaning process_
 ##Variables Description
 _Description of variables contained in the tidy data set_
 
-Each variable is written in the format "activity.subject", which describes an activity performed by a particular volunteer (subject) while wearing a Samsung Galaxy S II on her waist.
+Each variable is written in the format "activity.subject", which describes an activity performed by a particular volunteer (subject) while wearing a Samsung Galaxy S II on her waist. For example, LAYING.30 contains the measurements for subject number 30 performing activity of LAYING.
 
 There are 6 possible activities:
+
 1. WALKING
 2. WALKING_UPSTAIRS
 3. WALKING_DOWNSTAIRS
@@ -39,7 +40,7 @@ There are 6 possible activities:
 
 There are a total of 30 subjects/volunteers.
 
-The variables in the tidy data set are all the possible combinations (interactions) of activity and subject.
+The variables in the tidy data set are all the possible combinations (interactions) of activity and subject. For example, LAYING.30 contains the measurements for subject number 30 performing activity of LAYING.
 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
