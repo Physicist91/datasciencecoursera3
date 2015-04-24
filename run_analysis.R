@@ -1,9 +1,9 @@
-##Download and prepare the data for the project.
+##Download and unzip the data for the project.
 
-url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(url, destfile="Dataset.zip", method="curl")
+#url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+#download.file(url, destfile="Dataset.zip", method="curl")
 
-unzip("Dataset.zip")
+#unzip("Dataset.zip")
 
 setwd("UCI HAR Dataset")
 
@@ -12,14 +12,15 @@ setwd("UCI HAR Dataset")
 
 ##Load the data and assign proper labels to variables (step 4 from assignment instructions)
 
-subject_test <- read.table("test/subject_test.txt", col.names = "subject")
-subject_train <- read.table("train/subject_train.txt", col.names = "subject")
-
 features <- read.table("features.txt")
 features[, 2] <- as.character(features[, 2])
 
+subject_test <- read.table("test/subject_test.txt", col.names = "subject")
+subject_train <- read.table("train/subject_train.txt", col.names = "subject")
+
 X_test <- read.table("test/X_test.txt", col.names = features[, 2])
 Y_test <- read.table("test/Y_test.txt", col.names = "activity")
+
 X_train <- read.table("train/X_train.txt", col.names = features[, 2])
 Y_train <- read.table("train/Y_train.txt", col.names = "activity")
 
