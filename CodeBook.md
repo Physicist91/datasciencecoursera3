@@ -7,24 +7,39 @@ output:
     keep_md: yes
 ---
 
-##Original Codebooks that described the project and the raw data
-README.txt
-features_info.txt
+##Original Codebooks
+_Original codebooks that described the project and the raw data_
 
-##Raw Data used in the cleaning process
-test/subject_test.txt
-test/X_test.txt
-test/y_test.txt
-train/subject_train.txt
-train/X_train.txt
-train/y_train.txt
-features.txt
-activity_labels.txt
+* README.txt
+* features_info.txt
 
-##Variables
-Activity
+##Raw Data
+_Raw data used in the cleaning process_
+* test/subject_test.txt
+* test/X_test.txt
+* test/y_test.txt
+* train/subject_train.txt
+* train/X_train.txt
+* train/y_train.txt
+* features.txt
+* activity_labels.txt
 
+##Variables Description
+_Description of variables contained in the tidy data set_
 
+Each variable is written in the format "activity.subject", which describes an activity performed by a particular volunteer (subject) while wearing a Samsung Galaxy S II on her waist.
+
+There are 6 possible activities:
+1. WALKING
+2. WALKING_UPSTAIRS
+3. WALKING_DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING
+
+There are a total of 30 subjects/volunteers.
+
+The variables in the tidy data set are all the possible combinations (interactions) of activity and subject.
 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
