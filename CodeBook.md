@@ -7,27 +7,13 @@ output:
     keep_md: yes
 ---
 
-##Original Codebooks
-_Original codebooks that described the project and the raw data_
+__This codebook describes the variables in "tidy.txt" and its values.__
 
-* README.txt
-* features_info.txt
 
-##Raw Data
-_Raw data used in the cleaning process_
-* test/subject_test.txt
-* test/X_test.txt
-* test/y_test.txt
-* train/subject_train.txt
-* train/X_train.txt
-* train/y_train.txt
-* features.txt
-* activity_labels.txt
-
-##Variables Description
+##Variables
 _Description of variables contained in the tidy data set_
 
-Each variable is written in the format "activity.subject", which describes an activity performed by a particular volunteer (subject) while wearing a Samsung Galaxy S II on her waist. For example, LAYING.30 contains the measurements for subject number 30 performing activity of LAYING.
+Each variable is written in the format "activity.subject", which describes an activity performed by a particular volunteer (subject) while wearing a Samsung Galaxy S II on his/her waist. For example, LAYING.30 contains the measurements for subject number 30 performing activity of LAYING.
 
 There are 6 possible activities:
 
@@ -42,19 +28,46 @@ There are a total of 30 subjects/volunteers.
 
 The variables in the tidy data set are all the possible combinations (interactions) of activity and subject. For example, LAYING.30 contains the measurements for subject number 30 performing activity of LAYING.
 
+There are a total of 180 variables.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+##Observations
+_Description of each observation/measurement_
 
-```{r}
-summary(cars)
-```
+Each row in "tidy.txt" corresponds to a measurement involving mean() or std(), sorted according to the order they appear in "features.txt". There are two different kinds of measurements:
+* Acceleration is reported in standard gravity units 'g'.
+* Angular Velocity is reported in radians/second.
 
-You can also embed plots, for example:
+There are a total of 79 observations. Refer to features_info.txt and README.txt for more details on each measurement.
 
-```{r, echo=FALSE}
-plot(cars)
-```
+##Summary Choices
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+###Values
+Each value of observation in "tidy.txt" is the average of the corresponding measurement over all records in X_test and X_train. For example, the first row in "tidy.txt" is the average of all records of tBodyAcc-mean()-X, which corresponds to the first column in X_test and X_train.
+
+###Raw Data
+_Raw data used in the cleaning process_
+
+* test/subject_test.txt
+* test/X_test.txt
+* test/y_test.txt
+* train/subject_train.txt
+* train/X_train.txt
+* train/y_train.txt
+* features.txt
+* activity_labels.txt
+
+###Cleaning Process
+1. Merging data
+    + "X_test" and "X_train" are merged into a single dataset called "X".
+    + "y_test" and "y_train" are merged into a single dataset called "Y".
+    + "subject_test" and "subject_train" are merged into a single dataset called "subject"
+2. Using descriptive names and labels
+    + 
+
+
+###Original Codebooks
+_Original codebooks that described the project and the raw data_
+
+* README.txt
+* features_info.txt

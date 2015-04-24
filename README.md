@@ -37,3 +37,4 @@ data <- read.table("tidy.txt", header = TRUE)
 More details on the variables can be found in CodeBook.md
 
 ###The Code Book
+CodeBook.md contains information regarding all the variables in "tidy.txt" and the values, as well as summary choices made.
