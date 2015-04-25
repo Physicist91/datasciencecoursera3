@@ -38,3 +38,10 @@ More details on the variables can be found in CodeBook.md
 
 ###The Code Book
 CodeBook.md contains information regarding all the variables in "tidy.txt" and the values, as well as summary choices made.
+
+Information about the raw data is available from "features_info.txt" and "README.txt".
+
+###References
+
+Code book template
+https://gist.github.com/JorisSchut/dbc1fc0402f28cad9b41

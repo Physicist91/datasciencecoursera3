@@ -62,9 +62,19 @@ _Raw data used in the cleaning process_
     + "X_test" and "X_train" are merged into a single dataset called "X".
     + "y_test" and "y_train" are merged into a single dataset called "Y".
     + "subject_test" and "subject_train" are merged into a single dataset called "subject"
-2. Using descriptive names and labels
-    + 
-
+    + "subject", "X", and "Y" are combined into a single data frame
+2. Extract only measurements involving mean and standard deviation
+    + This is done by pattern matching using grepl on the features name
+    + Features names from "features.txt" are used to label the variables/columns of "X"
+3. Use descriptive variable names
+    + Variable name "subject" is assigned to the first column of the data frame
+    + Features names from "features.txt" are used to label the variables/columns of "X"
+    + Variable name "activity" is assigned to the last column of the data frame
+    + The labels from "activity_labels.txt" are used to replace the numeric labels in the last column.
+4. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
+    + The data frame is split with split function
+    + colMeans() is applied to column number 2 to the second last via lapply.
+    + write.table() is used to write the dataset into "tidy.txt" with row.names = FALSE.
 
 ###Original Codebooks
 _Original codebooks that described the project and the raw data_
