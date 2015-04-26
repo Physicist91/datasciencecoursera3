@@ -5,7 +5,7 @@
 
 #unzip("Dataset.zip")
 
-setwd("UCI HAR Dataset")
+#setwd("UCI HAR Dataset")
 
 
 
